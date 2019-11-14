@@ -1,0 +1,29 @@
+.App-wrapper {
+  display: grid;
+  text-align: center;
+  background-color: #a7fff2;
+  height: 100vh;
+  grid-template-rows: 1fr 3fr 1fr;
+  grid-template-columns: 1fr 3fr 1fr;
+  grid-gap: 5px;
+  grid-template-areas:
+    "header header header"
+    "content content content"
+    "footer footer footer";
+  margin: 0;
+  padding: 10px;
+}
+
+/*.Content-body {*/
+  /*background-color: #8b4c55;*/
+/*}*/
+/*.App-header {*/
+  /*background-color: #282c34;*/
+  /*min-height: 100vh;*/
+  /*display: flex;*/
+  /*flex-direction: column;*/
+  /*align-items: center;*/
+  /*justify-content: center;*/
+  /*font-size: calc(10px + 2vmin);*/
+  /*color: white;*/
+/*}*/
