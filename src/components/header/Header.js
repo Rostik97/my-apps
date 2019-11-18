@@ -5,7 +5,7 @@ import s from "./Header.module.css";
 const Header = (props) => {
     return (
         <div className={s.header}>
-            <h1>HEADER</h1>
+            Cloud-based sign service
         </div>
     )
 };

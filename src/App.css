@@ -1,17 +1,15 @@
 .App-wrapper {
+  font-family: Roboto, serif;
   display: grid;
+  background-color: #e3f2fd;
   text-align: center;
-  background-color: #a7fff2;
-  height: 100vh;
-  grid-template-rows: 1fr 3fr 1fr;
-  grid-template-columns: 1fr 3fr 1fr;
-  grid-gap: 5px;
+  height: 99vh;
+  grid-template-rows: 7vh 1fr 7vh;
+  grid-template-columns: 1fr 7fr 1fr;
   grid-template-areas:
-    "header header header"
-    "content content content"
-    "footer footer footer";
-  margin: 0;
-  padding: 10px;
+    ". h ."
+    "c c c"
+    ". f .";
 }
 
 /*.Content-body {*/

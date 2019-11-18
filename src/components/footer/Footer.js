@@ -3,7 +3,8 @@ import classes from "./Footer.module.css";
 const Footer = (props) => {
     return (
         <div className={classes.footer}>
-            <h1>FOOTER</h1>
+                @author Alekseev R.S
+                -2019-
         </div>
     )
 };

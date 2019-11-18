@@ -1,12 +1,14 @@
 import React from 'react';
 import classes from './Body.module.css'
-import Button from "./button/Button";
+import ButtonCerts from "./buttons/ButtonCerts";
+import ButtonSign from "./buttons/ButtonSign";
 
 const Body = (props) => {
     return (
         <div className={classes.content}>
-            <h1>BODY</h1>
-            <Button />
+            {/*<h1>BODY</h1>*/}
+            <ButtonCerts />
+            <ButtonSign />
         </div>
     )
 };
