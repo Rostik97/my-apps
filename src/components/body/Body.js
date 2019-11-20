@@ -7,12 +7,8 @@ import {Link} from "react-router-dom";
 const Body = (props) => {
     return (
         <div className={classes.content}>
-            <Link to="/cert">
                 <ButtonCerts/>
-            </Link>
-            <Link to="file">
                 <ButtonSign/>
-            </Link>
         </div>
     )
 };

@@ -4,9 +4,12 @@ import App from "../App";
 import FileZoneUpLoad from "../components/body/upload/FileZoneUpLoad";
 
 const routing = (
-        <Router>
-            <Route path="/" component={App}/>
-            <Route path="/file" render={() => <FileZoneUpLoad />}/>
-        </Router>
+    <Router>
+
+        <Route exact path="/" component={App}/>
+        <Route path="/file" render={() => <FileZoneUpLoad/>}/>
+        <Route path="/cert"/>
+
+    </Router>
 );
 export default routing;

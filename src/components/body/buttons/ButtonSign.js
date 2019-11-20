@@ -1,17 +1,16 @@
 import React from 'react'
 import s from "./ButtonSign.module.css"
-import {Link} from "react-router-dom";
 import FileZoneUpLoad from "../upload/FileZoneUpLoad";
+import {NavLink} from "react-router-dom";
 
 const ButtonSign = () => {
     return (
-        <div>
-                <button className={s.myButton} onClick={FileZoneUpLoad}>
-                    SIGN
-                    DOCUMENT
-                </button>
 
-        </div>
+        <NavLink to='/file'>
+            <button className={s.myButton}>
+                SIGN DOCUMENT
+            </button>
+        </NavLink>
     )
 };
 
