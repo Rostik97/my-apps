@@ -8,8 +8,8 @@ class FileZoneUpLoad extends React.Component {
         const reader = new FileReader();
         reader.readAsDataURL(file);
         reader.onload =  () => {
-            alert(reader.result);
-            console.log(reader.result);
+            let base64Data = reader.result;
+            console.log(base64Data);
         };
     }
 
@@ -21,7 +21,7 @@ class FileZoneUpLoad extends React.Component {
                         <div {...getRootProps()}>
 
                             <input {...getInputProps()} />
-                            <p className={classes.content}>Drag 'n' drop some files here, or click to select files</p>
+                            <p className={classes.content}>Drop some files here, or click to select files</p>
                         </div>
                     </section>
                 )}

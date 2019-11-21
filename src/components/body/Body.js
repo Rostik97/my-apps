@@ -7,6 +7,7 @@ import {Link} from "react-router-dom";
 const Body = (props) => {
     return (
         <div className={classes.content}>
+
                 <ButtonCerts/>
                 <ButtonSign/>
         </div>
