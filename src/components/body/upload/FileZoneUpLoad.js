@@ -5,10 +5,12 @@ import ButtonSendRequest from "../buttons/SendHttp";
 
 class FileZoneUpLoad extends React.Component {
 
+
     constructor(props) {
         super(props);
         this.state = {
-            selectedFiles: null
+            selectedFiles: null,
+            files: []
         }
     }
 
@@ -20,31 +22,38 @@ class FileZoneUpLoad extends React.Component {
             let base64Data = reader.result;
             let dataToSend = base64Data.slice(base64Data.indexOf(",") + 1);
             this.setState({
-                selectedFiles: dataToSend
+                selectedFiles: dataToSend,
+                files: files
             });
             console.log(this.state.selectedFiles)
         };
     }
 
     render() {
+        const files = this.state.files.map(file => (
+            <p className={classes.content} key={file.name}>
+                {file.name} - {file.size} bytes
+            </p>
+        ));
         return (
             <div>
                 <Dropzone onDrop={acceptedFiles => this.onDropHandler(acceptedFiles)}>
                     {({getRootProps, getInputProps}) => (
                         <section>
                             <div {...getRootProps()}>
-
                                 <input {...getInputProps()} />
                                 <p className={classes.content}>Drop some files here, or click to select files</p>
                             </div>
+                            <aside>
+                                <ul>{files}</ul>
+                            </aside>
                         </section>
                     )}
                 </Dropzone>
-            <ButtonSendRequest reqData={this.state.selectedFiles}/>
+                <ButtonSendRequest reqData={this.state.selectedFiles}/>
             </div>
         )
     }
-
 }
 
 export default FileZoneUpLoad;
